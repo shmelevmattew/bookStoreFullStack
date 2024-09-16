@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  server:
+    build: server/
+    command: Тут воткну для бека
+    ports: 
+      - 80:8080
+  client:
+    build: client/
+    command: Тут для фронта
+    
+
