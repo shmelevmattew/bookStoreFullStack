@@ -2,12 +2,15 @@ version: "3.8"
 
 services:
   server:
-    build: server/
-    command: Тут воткну для бека
-    ports: 
-      - 80:8080
+    image: server
+    build: 
+      context: .
+      dockerfile: server/Dockerfile
   client:
-    build: client/
-    command: Тут для фронта
-    
+    image: client
+    build: 
+      context: ./client
+      dockerfile: Dockerfile
+  proxy:
+    image: nginx:mainline
 
